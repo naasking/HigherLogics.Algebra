@@ -1,0 +1,22 @@
+﻿# TODO
+
+https://hackage.haskell.org/package/numeric-prelude
+https://hackage.haskell.org/package/numhask-0.5.0/docs/NumHask-Algebra-Abstract.html
+https://wiki.haskell.org/Applications_and_libraries/Mathematics#Type_class_hierarchies
+Haskell and computer algebra, C:\Users\naask\Downloads\haskellInCA2.pdf
+
+# Matrices
+
+https://en.wikipedia.org/wiki/Matrix_(mathematics)
+https://en.wikipedia.org/wiki/Matrix_representation
+https://en.wikipedia.org/wiki/Z-order_curve
+https://en.wikipedia.org/wiki/Iliffe_vector
+https://seanmiddleditch.com/matrices-handedness-pre-and-post-multiplication-row-vs-column-major-and-notations/
+https://stackoverflow.com/questions/22145037/matrix-multiplication-as-column-major
+https://en.wikipedia.org/wiki/Row-_and_column-major_order
+
+# Automatic Differentiation
+
+http://conal.net/papers/essence-of-ad/essence-of-ad-icfp.pdf
+http://conal.net/papers/compiling-to-categories/compiling-to-categories.pdf
+https://arxiv.org/pdf/1502.05767.pdf
