@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Runtime.CompilerServices;
 
 namespace HigherLogics.Algebra
 {
@@ -20,6 +21,7 @@ namespace HigherLogics.Algebra
         /// Compute an exponentiation.
         /// </summary>
         /// <param name="k">The exponent.</param>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public Ring<T> Pow(int k) =>
             new Ring<T>(Value.Pow(k));
 

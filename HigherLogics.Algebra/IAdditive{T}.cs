@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Runtime.CompilerServices;
 
 namespace HigherLogics.Algebra
 {
@@ -19,10 +20,13 @@ namespace HigherLogics.Algebra
     /// </remarks>
     public interface IAdditive<T>
     {
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         T Add(T rhs);
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         T Subtract(T rhs);
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         T Negate();
     }
 }

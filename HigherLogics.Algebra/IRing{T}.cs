@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Runtime.CompilerServices;
 
 namespace HigherLogics.Algebra
 {
@@ -21,10 +22,13 @@ namespace HigherLogics.Algebra
     {
         T One { get; }
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         T Const(int value);
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         T Multiply(T rhs);
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         T Pow(int k);
 
         //FIXME: add square?

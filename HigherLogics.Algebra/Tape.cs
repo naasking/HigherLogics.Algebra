@@ -37,8 +37,8 @@ namespace HigherLogics.Algebra
 
         public Tape<T> One => new Tape<T>(Magnitude.One, CreateNode, IGNORE);
 
-        public Tape<T> Const(double x) =>
-            new Tape<T>(Magnitude.Const(x), CreateNode, IGNORE);
+        //public Tape<T> Const(double x) =>
+        //    new Tape<T>(Magnitude.Const(x), CreateNode, IGNORE);
 
         public Tape<T> Const(int x) =>
             new Tape<T>(Magnitude.Const(x), CreateNode, IGNORE);
@@ -133,12 +133,12 @@ namespace HigherLogics.Algebra
             new Tape<T>(Magnitude.Add(rhs.Magnitude), CreateNode,
                         CreateNode(Id, NONE, rhs.Id, NONE, MathOp.Add));
 
-        /// <summary>
-        /// Add two Tape<T>s.
-        /// </summary>
-        public Tape<T> Add(double rhs) =>
-            new Tape<T>(Magnitude.Add(rhs), CreateNode,
-                       CreateNode(Id, NONE, IGNORE, NONE, MathOp.Add));
+        ///// <summary>
+        ///// Add two Tape<T>s.
+        ///// </summary>
+        //public Tape<T> Add(double rhs) =>
+        //    new Tape<T>(Magnitude.Add(rhs), CreateNode,
+        //               CreateNode(Id, NONE, IGNORE, NONE, MathOp.Add));
 
         /// <summary>
         /// Subtract two Tape<T>s.
@@ -147,19 +147,19 @@ namespace HigherLogics.Algebra
             new Tape<T>(Magnitude.Subtract(rhs.Magnitude), CreateNode,
                         CreateNode(Id, NONE, rhs.Id, NONE, MathOp.Sub));
 
-        /// <summary>
-        /// Subtract from a Tape<T>.
-        /// </summary>
-        public Tape<T> Subtract(double rhs) =>
-            new Tape<T>(Magnitude.Subtract(rhs), CreateNode,
-                        CreateNode(Id, NONE, IGNORE, NONE, MathOp.Sub));
+        ///// <summary>
+        ///// Subtract from a Tape<T>.
+        ///// </summary>
+        //public Tape<T> Subtract(double rhs) =>
+        //    new Tape<T>(Magnitude.Subtract(rhs), CreateNode,
+        //                CreateNode(Id, NONE, IGNORE, NONE, MathOp.Sub));
 
-        /// <summary>
-        /// Subtract a Tape<T> from a constant.
-        /// </summary>
-        public Tape<T> SubtractFrom(double rhs) =>
-            new Tape<T>(Magnitude.SubtractFrom(rhs), CreateNode,
-                        CreateNode(IGNORE, NONE, Id, NONE, MathOp.Sub));
+        ///// <summary>
+        ///// Subtract a Tape<T> from a constant.
+        ///// </summary>
+        //public Tape<T> SubtractFrom(double rhs) =>
+        //    new Tape<T>(Magnitude.SubtractFrom(rhs), CreateNode,
+        //                CreateNode(IGNORE, NONE, Id, NONE, MathOp.Sub));
 
         /// <summary>
         /// Multiply two Tape<T>s.
@@ -168,19 +168,19 @@ namespace HigherLogics.Algebra
             new Tape<T>(Magnitude.Multiply(rhs.Magnitude), CreateNode,
                         CreateNode(Id, Magnitude, rhs.Id, rhs.Magnitude, MathOp.Mul));
 
-        /// <summary>
-        /// Multiply two Tape<T>s.
-        /// </summary>
-        public Tape<T> Multiply(double rhs) =>
-            new Tape<T>(Magnitude.Multiply(rhs), CreateNode,
-                        CreateNode(Id, NONE, IGNORE, Magnitude.Const(rhs), MathOp.Mul));
+        ///// <summary>
+        ///// Multiply two Tape<T>s.
+        ///// </summary>
+        //public Tape<T> Multiply(double rhs) =>
+        //    new Tape<T>(Magnitude.Multiply(rhs), CreateNode,
+        //                CreateNode(Id, NONE, IGNORE, Magnitude.Const(rhs), MathOp.Mul));
 
-        /// <summary>
-        /// Multiply two Tape<T>s.
-        /// </summary>
-        public Tape<T> Multiply(int rhs) =>
-            new Tape<T>(Magnitude.Multiply(rhs), CreateNode,
-                        CreateNode(Id, NONE, IGNORE, Magnitude.Const(rhs), MathOp.Mul));
+        ///// <summary>
+        ///// Multiply two Tape<T>s.
+        ///// </summary>
+        //public Tape<T> Multiply(int rhs) =>
+        //    new Tape<T>(Magnitude.Multiply(rhs), CreateNode,
+        //                CreateNode(Id, NONE, IGNORE, Magnitude.Const(rhs), MathOp.Mul));
 
         /// <summary>
         /// Divide two Tape<T>s.
@@ -189,19 +189,19 @@ namespace HigherLogics.Algebra
             new Tape<T>(Magnitude.Divide(rhs.Magnitude), CreateNode,
                         CreateNode(Id, Magnitude, rhs.Id, rhs.Magnitude, MathOp.Div));
 
-        /// <summary>
-        /// Divide two Tape<T>s.
-        /// </summary>
-        public Tape<T> Divide(double rhs) =>
-            new Tape<T>(Magnitude.Divide(rhs), CreateNode,
-                        CreateNode(Id, NONE, IGNORE, Magnitude.Const(rhs), MathOp.Div));
+        ///// <summary>
+        ///// Divide two Tape<T>s.
+        ///// </summary>
+        //public Tape<T> Divide(double rhs) =>
+        //    new Tape<T>(Magnitude.Divide(rhs), CreateNode,
+        //                CreateNode(Id, NONE, IGNORE, Magnitude.Const(rhs), MathOp.Div));
 
-        /// <summary>
-        /// Divide two Tape<T>s.
-        /// </summary>
-        public Tape<T> Divide(int rhs) =>
-            new Tape<T>(Magnitude.Divide(rhs), CreateNode,
-                        CreateNode(Id, NONE, IGNORE, Magnitude.Const(rhs), MathOp.Div));
+        ///// <summary>
+        ///// Divide two Tape<T>s.
+        ///// </summary>
+        //public Tape<T> Divide(int rhs) =>
+        //    new Tape<T>(Magnitude.Divide(rhs), CreateNode,
+        //                CreateNode(Id, NONE, IGNORE, Magnitude.Const(rhs), MathOp.Div));
 
         /// <summary>
         /// Take the reciprocal.

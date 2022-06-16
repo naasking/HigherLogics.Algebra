@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Runtime.CompilerServices;
 
 namespace HigherLogics.Algebra
 {
@@ -18,8 +19,10 @@ namespace HigherLogics.Algebra
     /// </remarks>
     public interface IAbsolute<T> : IRing<T>
     {
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         T Abs();
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         int Sign();
     }
 }
