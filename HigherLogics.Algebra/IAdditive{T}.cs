@@ -20,6 +20,11 @@ namespace HigherLogics.Algebra
     /// </remarks>
     public interface IAdditive<T>
     {
+        //FIXME: might not be the best idea to specify inlining on the interface. Since
+        //the idea is that most clients should be structs, those will get specialized anyway,
+        //so the inlining annotations on the implementations of those methods might be
+        //sufficient. More complex types, like large matrices, arguably shouldn't be
+        //inlined in this fashion.
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         T Add(T rhs);
 
