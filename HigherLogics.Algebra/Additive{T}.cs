@@ -23,6 +23,7 @@ namespace HigherLogics.Algebra
         /// <param name="lhs"></param>
         /// <param name="rhs"></param>
         /// <returns></returns>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Additive<T> operator -(Additive<T> x) =>
             new Additive<T>(x.Value.Negate());
 
@@ -32,6 +33,7 @@ namespace HigherLogics.Algebra
         /// <param name="lhs"></param>
         /// <param name="rhs"></param>
         /// <returns></returns>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Additive<T> operator +(Additive<T> lhs, Additive<T> rhs) =>
             new Additive<T>(lhs.Value.Add(rhs.Value));
 
@@ -41,9 +43,11 @@ namespace HigherLogics.Algebra
         /// <param name="lhs"></param>
         /// <param name="rhs"></param>
         /// <returns></returns>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Additive<T> operator -(Additive<T> lhs, Additive<T> rhs) =>
             new Additive<T>(lhs.Value.Subtract(rhs.Value));
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static implicit operator Additive<T>(T value) =>
             new Additive<T>(value);
     }

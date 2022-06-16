@@ -20,7 +20,11 @@ namespace HigherLogics.Algebra
     /// </remarks>
     public interface IRing<T> : IAdditive<T>
     {
-        T One { get; }
+        T One
+        {
+            [MethodImpl(MethodImplOptions.AggressiveInlining)]
+            get;
+        }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         T Const(int value);
